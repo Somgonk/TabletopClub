@@ -3,10 +3,12 @@
 </script>
 
 <template>
-  <Navbar />
+  <Navbar/>
   <router-view></router-view>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "./variables.scss";
+
 
 </style>
