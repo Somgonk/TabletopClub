@@ -7,16 +7,22 @@
 </template>
 
 <script lang="ts">
+import screenshot1 from "/src/assets/screenshots/screenshot1.png";
+import screenshot2 from "/src/assets/screenshots/screenshot2.png";
+import screenshot3 from "/src/assets/screenshots/screenshot3.png";
+import screenshot4 from "/src/assets/screenshots/screenshot4.png";
+import screenshot5 from "/src/assets/screenshots/screenshot5.png";
+
 export default {
   name: "Slideshow",
   data() {
     return {
       images: [
-        "src/assets/screenshots/screenshot1.png",
-        "src/assets/screenshots/screenshot2.png",
-        "src/assets/screenshots/screenshot3.png",
-        "src/assets/screenshots/screenshot4.png",
-        "src/assets/screenshots/screenshot5.png",
+        screenshot1, 
+        screenshot2, 
+        screenshot3, 
+        screenshot4, 
+        screenshot5
         // add more images here
       ],
       currentIndex: 3,
