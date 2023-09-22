@@ -5,7 +5,7 @@ import Slideshow from '../components/Slideshow.vue';
   <div class="home">
     <div class="header">
       <Slideshow></Slideshow>
-      <img src="src/assets/tabletop_club_logo.svg">
+      <img src="../assets/tabletop_club_logo.svg">
     </div> 
     <h1> hoem</h1>
     <h2>home</h2>
