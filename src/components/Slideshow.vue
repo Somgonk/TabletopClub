@@ -27,7 +27,7 @@ export default {
       ],
       currentIndex: 3,
       timer: null,
-      interval: 5000, // change this to adjust the interval between slides
+      interval: 1500, // change this to adjust the interval between slides
     };
   },
   methods: {
@@ -61,7 +61,7 @@ export default {
 <style scoped lang="scss">
 @import '../variables.scss';
 .slideshow {
-  height: calc(90vh - #{$navbar-height});
+  max-height: calc(90vh - #{$navbar-height});
   width: 100vw;
   overflow: hidden;
   z-index: 0;

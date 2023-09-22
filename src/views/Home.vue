@@ -17,11 +17,11 @@ import Slideshow from '../components/Slideshow.vue';
   position: relative;
   img {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 300px;
+    width: 30vmax;
   }
 }
 </style>
