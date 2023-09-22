@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../views/Documentation.vue'),
   },
   {
+    path: "/TabletopClub/download",
+    name: "download",
+    component: () => import('../views/Download.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     component: () => import('../views/NotFound.vue')
   },
