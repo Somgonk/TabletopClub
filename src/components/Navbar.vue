@@ -16,9 +16,9 @@
         <router-link to="/TabletopClub/download">
           <h3>Download</h3>
         </router-link>
-        <router-link to="/TabletopClub/contribute">
+        <a href="https://tabletop-club.readthedocs.io/en/latest/general/contributing/index.html">
           <h3>Contribute</h3>
-        </router-link>
+        </a>
         <a href="https://tabletop-club.readthedocs.io">
           <h3>Documentation</h3>
         </a>
@@ -35,9 +35,9 @@
       <router-link to="/TabletopClub/download">
         <h3>Download</h3>
       </router-link>
-      <router-link to="/TabletopClub/contribute">
+      <a href="https://tabletop-club.readthedocs.io/en/latest/general/contributing/index.html">
         <h3>Contribute</h3>
-      </router-link>
+      </a>
       <router-link to="/TabletopClub/documentation">
         <h3>Documentation</h3>
       </router-link>
@@ -99,7 +99,7 @@ export default {
           const scrollPosition = about.getBoundingClientRect().top + window.scrollY - navbarHeight - 5;
           window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         }
-      }, 1);
+      }, 20);
     }
   },
 };

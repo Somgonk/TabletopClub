@@ -27,7 +27,7 @@ import Slideshow from "../components/Slideshow.vue";
         <li class="explanation">
           <h2>Multiplayer</h2>
           <p>
-            Tabletop Club can be played in singleplayer in multiplayer. 
+            Tabletop Club can be played in singleplayer or multiplayer. 
             You don't need to make an account to play multiplayer, you can just host a game and start playing with friends!
           </p>
         </li>

@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import HomeVue from '../views/Home.vue';
 
 
 const routes = [
   {
       path: "/TabletopClub/",
       name: "home",
-      component: () => import('../views/Home.vue'),
+      component: HomeVue,
   },
   {
     path: "/TabletopClub/contribute",
