@@ -10,6 +10,9 @@
         </router-link>
       </div>
       <div class="links" v-if="!isMobile">
+        <a @click="scrollToAbout()">
+          <h3>About</h3>
+        </a>
         <router-link to="/TabletopClub/download">
           <h3>Download</h3>
         </router-link>
@@ -26,6 +29,9 @@
       <router-link to="/TabletopClub/">
         <h3>Home</h3>
       </router-link>
+      <a @click="scrollToAbout()">
+        <h3>About</h3>
+      </a>
       <router-link to="/TabletopClub/download">
         <h3>Download</h3>
       </router-link>
@@ -41,6 +47,8 @@
 
 
 <script lang="ts">
+import router from '../router/router';
+
 export default {
   name: "Navbar",
   data() {
@@ -69,11 +77,29 @@ export default {
         this.isScrolled = currentScrollPosition > 10;
     },
     handleResize() {
-      this.isMobile = window.innerWidth < 900;
+      this.isMobile = window.innerWidth < 1030;
       this.displayTitle = window.innerWidth > 400;
     },
     handleClick(event: MouseEvent) {
       event
+    },
+    checkPath() {
+      if (window.location.pathname != "/TabletopClub/") {
+        router.push({ path: "/TabletopClub/" });
+      }
+      return true;
+    },
+    scrollToAbout () {
+      this.checkPath();
+      setTimeout(() => {
+        const about = document.querySelector('.about');
+        if (about) {
+          this.isScrolled = true;
+          const navbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--shrunken-navbar-height'));
+          const scrollPosition = about.getBoundingClientRect().top + window.scrollY - navbarHeight - 5;
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+      }, 1);
     }
   },
 };
@@ -85,17 +111,17 @@ export default {
 
 .navbar-wrapper {
   z-index: 999;
-  position: sticky;
+  position: fixed;
   top:0;
   left: 0;
   height: $navbar-height;
   transition: height ease .3s;
+  border-bottom: 2px solid $background;
 }
 .navbar {
   z-index: 999;
   transition: height ease .3s;
   font-family: "Bungee", cursive;
-  position: sticky;
   top:0;
   left: 0;
   justify-content: space-between;
@@ -157,7 +183,6 @@ export default {
   }
 }
 .shrunken-navbar-wrapper {
-  height: $shrunkn-navbar-height;
+  height: $shrunken-navbar-height;
 }
-
 </style>

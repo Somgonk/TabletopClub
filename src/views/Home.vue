@@ -1,14 +1,67 @@
 <script setup lang="ts">
-import Slideshow from '../components/Slideshow.vue';
+import Slideshow from "../components/Slideshow.vue";
 </script>
 <template>
   <div class="home">
     <div class="header">
       <Slideshow></Slideshow>
-      <img src="/src/assets/tabletop_club_logo.svg">
-    </div> 
-    <h1> hoem</h1>
-    <h2>home</h2>
+      <img src="/src/assets/tabletop_club_logo.svg" />
+    </div>
+    <div class="about">
+      <h1>Tabletop Club is a free and open source multiplayer 3D physics-based sandbox.</h1>
+      <h2>What does that mean?</h2>
+      <ul class="explanations">
+        <li class="explanation">
+          <h2>Free and Open-source</h2>
+          <p>
+            Tabletop club is free to download and play. All of the source code is available to view on 
+            <a href="https://github.com/drwhut/tabletop-club">
+              Github
+            </a>
+            . This means that you can also 
+            <a href="https://tabletop-club.readthedocs.io/en/latest/general/contributing/index.html">
+              contribute
+            </a>!
+          </p>
+        </li>
+        <li class="explanation">
+          <h2>Multiplayer</h2>
+          <p>
+            Tabletop Club can be played in singleplayer in multiplayer. 
+            You don't need to make an account to play multiplayer, you can just host a game and start playing with friends!
+          </p>
+        </li>
+        <li class="explanation">
+          <h2>3D Physics-Based</h2>
+          <p>
+            Not only is the game a simulator of tabletop games, it also has a fully-simulated 3D physics engine! 
+            This means that objects in the game act like they do in real life, 
+            and it also means you can potentially send objects flying off the edge! 
+            Did I also mention you could flip the table?
+          </p>
+        </li>
+        <li class="explanation">
+          <h2>Sandbox</h2>
+          <p>
+            In Tabletop Club, you are given a box of toys to play with, and it's up to you what you do with them! 
+            Sure, you can play board games, but why not make a house made of dice, then frisbee it with a poker chip? 
+            Draw on the table while waiting for your opponent to make a move in chess, 
+            or flip the table into deep space after losing an all-in bet? The table is your oyster!
+          </p>
+        </li>
+      </ul>
+      <h2>Import or Make Custom Assets</h2>
+      <p>
+        Do you have a D&D campaign in mind? Want to command an army in Warhammer? 
+        Or is there another board game you want to play? 
+        Luckily, the game uses a modular and easy-to-use 
+        <a href="https://tabletop-club.readthedocs.io/en/latest/custom_assets/asset_packs/index.html">
+          asset pack system
+        </a> 
+        that makes it really quick to import your images, 
+        models, music, and more!
+      </p>
+    </div>
   </div>
 </template>
 
@@ -23,5 +76,9 @@ import Slideshow from '../components/Slideshow.vue';
     z-index: 1;
     width: 30vmax;
   }
+}
+.about {
+  width: 75%;
+  margin: 0 auto;
 }
 </style>

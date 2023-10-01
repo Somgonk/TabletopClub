@@ -35,7 +35,6 @@ export default {
       this.timer = setInterval(() => {
         this.currentIndex = (this.currentIndex + 1) % this.images.length;
       }, this.interval) as unknown as null;
-      console.log(this.currentIndex = (this.currentIndex + 1) % this.images.length)
     },
     stopTimer() {
       if (this.timer !== null) {
@@ -61,7 +60,7 @@ export default {
 <style scoped lang="scss">
 @import '../variables.scss';
 .slideshow {
-  max-height: calc(90vh - #{$navbar-height});
+  max-height: calc(100vh - #{$navbar-height});
   width: 100vw;
   overflow: hidden;
   z-index: 0;

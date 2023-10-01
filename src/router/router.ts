@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+
+
 const routes = [
   {
       path: "/TabletopClub/",
@@ -12,14 +14,14 @@ const routes = [
     component: () => import('../views/Contribute.vue'),
   },
   {
-    path: "/TabletopClub/documentation",
-    name: "documentation",
-    component: () => import('../views/Documentation.vue'),
-  },
-  {
     path: "/TabletopClub/download",
     name: "download",
     component: () => import('../views/Download.vue'),
+  },
+  {
+    path: "/TabletopClub/about",
+    name: "about",
+    component: () => import('../views/About.vue'),
   },
   {
     path: "/:catchAll(.*)",

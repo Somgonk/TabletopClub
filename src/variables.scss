@@ -5,7 +5,11 @@ $secondary: #2d2d2d;
 $accent: #94AC8C;
 
 $navbar-height: 75px;
-$shrunkn-navbar-height: 50px;
+$shrunken-navbar-height: 50px;
 
 $slideshow-brightness: 0.1;
 //not empty
+
+:root {
+  --shrunken-navbar-height: #{$shrunken-navbar-height};
+}
