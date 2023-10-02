@@ -16,12 +16,8 @@ import Slideshow from "../components/Slideshow.vue";
           <p>
             Tabletop club is free to download and play. All of the source code is available to view on 
             <a href="https://github.com/drwhut/tabletop-club">
-              Github
-            </a>
-            . This means that you can also 
-            <a href="https://tabletop-club.readthedocs.io/en/latest/general/contributing/index.html">
-              contribute
-            </a>!
+              Github</a>. This means that <strong>you</strong> can also 
+            <a href="https://tabletop-club.readthedocs.io/en/latest/general/contributing/index.html">contribute</a>!
           </p>
         </li>
         <li class="explanation">
@@ -50,6 +46,12 @@ import Slideshow from "../components/Slideshow.vue";
           </p>
         </li>
       </ul>
+      <h2>Tabletop Board Game</h2>
+      <p>
+        The game is designed to allow you to play your favourite tabletop board games 
+        by effectively giving you a box of toys to play with (which include things like cards, dice, game pieces, 
+        and more), and it's up to you what you do with what you're given!
+      </p>
       <h2>Import or Make Custom Assets</h2>
       <p>
         Do you have a D&D campaign in mind? Want to command an army in Warhammer? 

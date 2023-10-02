@@ -1,7 +1,7 @@
 <template>
   <div :class="['navbar-wrapper', { 'shrunken-navbar-wrapper': isScrolled }]">
     <div :class="['navbar', { 'shrunken-navbar': isScrolled }]">
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" @click="scrollToTop()">
         <router-link to="/TabletopClub/">
           <div class="logo">
             <img src="../assets/tabletop_club_icon.png" />
@@ -22,11 +22,14 @@
         <a href="https://tabletop-club.readthedocs.io">
           <h3>Documentation</h3>
         </a>
+        <a href="https://tabletop-club.readthedocs.io/en/latest/general/about.html#frequently-asked-questions">
+          <h3>FAQ</h3>
+        </a>
       </div>
       <img class="menu-button" src="../assets/icons/menu.svg" v-if="isMobile" @click="menuOpen = !menuOpen">
     </div>
     <div class="dropdown" v-if="menuOpen && isMobile" @click="menuOpen = false">
-      <router-link to="/TabletopClub/">
+      <router-link to="/TabletopClub/" @click="scrollToTop()">
         <h3>Home</h3>
       </router-link>
       <a @click="scrollToAbout()">
@@ -77,7 +80,7 @@ export default {
         this.isScrolled = currentScrollPosition > 10;
     },
     handleResize() {
-      this.isMobile = window.innerWidth < 1030;
+      this.isMobile = window.innerWidth < 1100;
       this.displayTitle = window.innerWidth > 400;
     },
     handleClick(event: MouseEvent) {
@@ -99,7 +102,12 @@ export default {
           const scrollPosition = about.getBoundingClientRect().top + window.scrollY - navbarHeight - 5;
           window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         }
-      }, 20);
+      }, 75);
+    },
+    scrollToTop() {
+      if (window.location.pathname == "/TabletopClub/") {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   },
 };
@@ -108,7 +116,9 @@ export default {
 <style scoped lang="scss">
 @import "../variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap");
-
+a {
+  all: revert;
+}
 .navbar-wrapper {
   z-index: 999;
   position: fixed;
@@ -117,7 +127,9 @@ export default {
   height: $navbar-height;
   transition: height ease .3s;
   border-bottom: 2px solid $background;
+  
 }
+
 .navbar {
   z-index: 999;
   transition: height ease .3s;
@@ -134,6 +146,8 @@ export default {
     transition: color ease 0.2s;
     text-decoration: none;
     color: $text;
+    background-color: transparent;
+    border-radius: 0;
   }
   a:hover {
     color: $accent;
@@ -143,6 +157,7 @@ export default {
     display: block;
   }
   .logo {
+    margin-top: 0;
     height: 100%;
     display: flex;
     align-items: center;
@@ -152,6 +167,8 @@ export default {
     }
     h1 {
       white-space: nowrap;
+      margin: 0;
+      padding: 0;
     }
   }
   .links {
