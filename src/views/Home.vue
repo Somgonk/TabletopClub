@@ -68,11 +68,13 @@ import Slideshow from "../components/Slideshow.vue";
 </template>
 
 <style scoped lang="scss">
+@import "src/variables.scss";
 .header {
+  margin-top: $shrunken-navbar-height;
   position: relative;
   img {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
