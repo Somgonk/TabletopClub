@@ -24,16 +24,7 @@ body {
 }
 
 a{
-  background-color: $primary;
   color: $text;
-  padding: 6px;
-  padding-top: 4px;
-  margin: 2px;
-  border-radius: .5em;
   font-style: italic;
   font-weight: bold;
-  transition: .1s ease-in-out;
-}
-a:hover {
-  background-color: $accent;
 }

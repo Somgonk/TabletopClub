@@ -11,7 +11,7 @@
 .footer {
   background-color: $secondary;
   padding: 10px;
-
+  margin-top: 20px;
 }
 a {
   all: revert;
