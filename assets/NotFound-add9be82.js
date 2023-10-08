@@ -1,0 +1,1 @@
+import{_ as e,o,c as t,b as n}from"./index-22ae0460.js";const s={},c=n("h1",null," Sorry, this page doesn't exist or has been moved to another location ",-1),r=[c];function a(_,d){return o(),t("div",null,r)}const l=e(s,[["render",a]]);export{l as default};
