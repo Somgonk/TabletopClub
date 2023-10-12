@@ -30,29 +30,12 @@ import Slideshow from "../components/Slideshow.vue";
           </p>
         </div>
         <div class="explanation">
-          <h2>3D Physics-Based</h2>
-          <p>
-            Not only is the game a simulator of tabletop games, it also has a fully-simulated 3D physics engine! 
-            This means that objects in the game act like they do in real life, 
-            and it also means you can potentially send objects flying off the edge! 
-            Did I also mention you could flip the table?
-          </p>
-        </div>
-        <div class="explanation">
-          <h2>Sandbox</h2>
+          <h2>3D physics-based sandbox</h2>
           <p>
             In Tabletop Club, you are given a box of toys to play with, and it's up to you what you do with them! 
             Sure, you can play board games, but why not make a house made of dice, then frisbee it with a poker chip? 
             Draw on the table while waiting for your opponent to make a move in chess, 
             or flip the table into deep space after losing an all-in bet? The table is your oyster!
-          </p>
-        </div>
-        <div class="explanation">
-          <h2>Tabletop Board Game</h2>
-          <p>
-            The game is designed to allow you to play your favourite tabletop board games 
-            by effectively giving you a box of toys to play with (which include things like cards, dice, game pieces, 
-            and more), and it's up to you what you do with what you're given!
           </p>
         </div>
         <div class="explanation">
@@ -69,8 +52,6 @@ import Slideshow from "../components/Slideshow.vue";
           </p>
         </div>
       </div>
-      
-      
     </div>
   </div>
 </template>
