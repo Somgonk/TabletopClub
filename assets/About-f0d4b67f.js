@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as o}from"./index-13d38a90.js";const s={name:"About",data(){return{docs:"no"}},async mounted(){}};const _={class:"about"};function c(n,a,r,d,u,p){return e(),o("div",_)}const i=t(s,[["render",c],["__scopeId","data-v-5b9b1383"]]);export{i as default};
